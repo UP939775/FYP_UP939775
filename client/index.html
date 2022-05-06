@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/map.js"></script>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+    <header class="header">
+        <h1 class="page-title">Project<span id="title-p2" >Park</span></h1>
+        <nav>
+            <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/events.html">Events</a></li>
+            <li><a href="/contact.html">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="home-main">
+        <div id="view-type">
+            <div class="view-selector" id="list-view">List View</div>
+            <div class="view-selector" id="map-view">Map View</div>
+        </div> 
+    </div>
+    <div class="home-list">
+        <div class="list-view"></div>  
+    </div>
+    <div class="home-map">
+        <div id="main-map"></div>
+    </div>
+    
+</body>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAi9DNybMTW4S_7ZEkpyw1mkZQwLu5B-2A&callback=initMap&v=weekly"></script>
+</html>

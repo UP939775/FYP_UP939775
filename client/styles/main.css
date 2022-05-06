@@ -1,0 +1,441 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eefeeb;
+}
+
+p, h1, h2, h3, h4, input, a, button, label, textarea, span, div{
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: .05rem;
+  font-weight: 100;
+  text-decoration: none;
+}
+
+
+.header {
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 15%;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+.page-title {
+  cursor: pointer;
+  color: white;
+}
+
+#title-p2 {
+  color: #81d982
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.nav-links li:hover {
+  background-color: #81d982;
+  border-radius: 10px;
+}
+
+.nav-links, li, a {
+  transition: all 0.3s ease 0s;
+}
+
+
+.nav-links li a  {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  padding: .5rem
+}
+
+.default-button {
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  margin-top: 4rem;
+  padding: .5rem;
+  background-color: #81d982;
+  border-radius: 10px;
+}
+
+
+/* HOME PAGE CSS */
+
+#home-main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 6rem;
+  justify-content: center;
+
+}
+
+#view-type {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.view-selector {
+  border: solid #81d982 2px;
+  font-size: 2rem;
+  padding: .5rem 1rem .5rem 1.5rem;
+}
+
+#list-view{
+  border-radius: 90px 0px 0px 90px;
+  background-color: #81d982;
+}
+
+.view-selector:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
+#map-view{
+  border-radius: 0px 90px 90px 0px;
+}
+
+#marker-content { 
+  text-align: center;
+}
+
+#marker-heading {
+  padding: .5rem;
+}
+
+.home-map {
+  justify-content: center;
+  margin: 0% 15% 10% 5%;
+}
+
+.home-list {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  
+}
+
+#main-map{
+  width: 100%;
+  height: 80%;
+  display: none;
+  justify-content: center;
+  margin-right: 15%;
+}
+
+.list-view {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.location-card {
+  background-color: #ffffff;
+  margin: .5rem;
+  border: .2px solid black;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 30%;
+  max-height: 30rem;
+  min-height: 12rem;
+  filter: drop-shadow(-3px 3px 4px #000000);
+  text-align: center;
+}
+
+.location-card h2 {
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+
+/* INDIVIDUAL LOCATION */
+
+#location-main {
+  margin: 6rem 15% 0rem 15%;
+  
+}
+
+.location-header {
+  /* background-color: grey; */
+  border-radius: 15px;
+}
+
+.location-image {
+  object-fit: cover;
+  width: 100%;
+  height: 25rem;
+  padding: 1rem;
+  border-radius: 25px;
+  
+}
+
+#location-title {
+  padding: 1rem;
+  position: absolute;
+  top: 18rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  filter: drop-shadow(-3.5px 3.5px 1px #000000);
+  letter-spacing: .5rem;
+  
+}
+
+#park-address {
+  top: 21rem;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  filter: drop-shadow(-3.5px 3.5px 1px #000000);
+  font-style: oblique;
+
+}
+
+.location-description {
+  padding: 1rem;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.location-section {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  border-radius: 10px;
+  border: 1px black solid;
+  margin: .25rem;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .location-section:hover {
+  background-color: #81d982;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.section-dropdown {
+  padding: 1rem;
+  background-color: rgb(233, 233, 233);
+  display: none;
+  overflow: hidden;
+  width: 98%;
+  border-radius: 10px;
+  margin: -1rem .75% .25rem 1.25%;
+  border: .75px solid black;
+  
+}
+
+.location-section:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.facility {
+  display: flex;
+}
+
+/* SORT THIS SECTION vvvv */
+.facility div {
+  width: 30%;
+  text-align: center;
+  font-size: 1rem;
+  background-color: lightgrey;
+  border: .5px solid black;
+  border-radius: 0px 10px 10px 0px;
+  padding: .5rem;
+  margin-bottom: .5rem;
+}
+
+.facility div:nth-child(odd) {
+  width: 70%;
+  background: #e0e0e0;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.availibility {
+  display: flex;
+  text-align: center;
+}
+
+.availibility div {
+  width: 30%;
+  text-align: center;
+  font-size: 1rem;
+  background-color: lightgrey;
+  border: .5px solid black;
+  border-radius: 0px 10px 10px 0px;
+  padding: .5rem;
+  margin-bottom: .5rem;
+}
+
+.availibility div:nth-child(odd) {
+  width: 70%;
+  background: #e0e0e0;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.unavailable {
+  color: red;
+}
+
+/* SORT THIS SECTION ^^^^ */
+/* .facility-name {
+  float:left;
+}
+
+.facility-option {
+  float: right;
+} */
+
+
+/* EVENTS PAGE */
+
+
+.events-main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 6rem;
+  justify-content: center;
+
+}
+
+.input-field {
+  width: 100%;
+  height: 3.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  color: black;
+  padding: 1rem;
+  
+}
+
+
+
+
+@media(max-width:650px) {
+
+
+  .header {
+      text-align: center;
+      width: 100%;
+      padding:0rem 3% 0rem 3%;
+  }
+
+  .page-title{
+    font-size: 1rem;
+  }
+
+  .nav-links li a {
+    font-size: 1rem;
+
+  }
+  #location-main, #home-main{
+    margin:6rem 3% 0rem 3%;
+  }
+
+  .list-view div {
+    width: 100%;
+  }
+
+  .location-image {
+    width: 100%;
+    height: 15rem;
+    border-radius: 25px;
+  }
+
+  #location-title {
+    font-size: 1.5rem;
+    left: 8rem;
+    top: 17rem;
+    letter-spacing: normal;
+  }
+
+  #park-address {
+    top: 18.25rem;
+    left: 9rem;
+    font-size: .5rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    filter: drop-shadow(-3.5px 3.5px 1px #000000);
+  
+  }
+
+
+
+
+  .submission-card a {
+      float: left;
+      margin: 0%;
+  }
+}
+
+
+
+
+/* TESTING PAGE */
+
+#testing-main{
+  margin: 6rem 15% 0rem 15%;
+}
+
+.park-test {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  width: 100%;
+  justify-content:center;
+  margin: 1rem;
+  text-align: center;
+}
+
+.park-name-test {
+  border: 1px solid black;
+  width: 100%;
+}
+
+.park-checkbox-test {
+  margin: .1rem;
+  padding: 1rem;
+  border: solid 1px black;
+  width: 10rem;
+
+
+}
+
+.park-checkbox-test label {
+  padding-right: .5rem;
+}
+
+
